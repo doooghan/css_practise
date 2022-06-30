@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>解决嵌套浮动问题-空标签和伪类</title>
+    <style>
+      body {
+        border: 1px solid #000;
+      }
+      .box1 {
+        width: 200px;
+        border: 1px solid pink;
+      }
+      .box2 {
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+        float: left;
+      }
+      .clearfix::after {
+        content: "aa";
+        clear: both;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="box1">
+        <div class="box2"></div>
+        <div style="clear:both"></div>
+    </div>
+    bbb -->
+    <div class="box1 clearfix">
+      <div class="box2"></div>
+    </div>
+    bbb
+  </body>
+</html>
