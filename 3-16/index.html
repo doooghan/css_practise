@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>练习题</title>
+    <style>
+      .main {
+        border: 1px solid #000;
+      }
+      .box1 {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        float: left;
+      }
+      .box2 {
+        height: 200px;
+        background-color: skyblue;
+        margin-left: 120px;
+        /* float: right; */
+      }
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="box1"></div>
+      <div class="box2"></div>
+    </div>
+  </body>
+</html>
