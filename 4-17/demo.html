@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>轮播图</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./iconfont.css" />
+    <style>
+      .swiper-container {
+        position: relative;
+      }
+      .swiper-wrapper {
+        display: flex;
+      }
+      .swiper-slide {
+        width: 100%;
+        flex-shrink: 0;
+      }
+      .swiper-slide img {
+        width: 100%;
+      }
+      .swiper-pagination {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        height: 28px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+      .swiper-pagination-bullet {
+        /* display: block; */
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #c6bcaf;
+        margin: 0 8px;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: #fff;
+      }
+      .swiper-button-prev {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+      }
+
+      .swiper-button-next {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .iconfont {
+        color: #fff;
+        font-size: 44px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            src="https://pic3.iqiyipic.com/common/lego/20210609/e66f0e28608f4aa7b08b5d93088c73c6.jpg?caplist=jpg,webp"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://pic0.iqiyipic.com/common/lego/20210614/71f0084bddcb446db323fa9eebf53585.jpg?caplist=jpg,webp"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://m.iqiyipic.com/common/lego/20210613/80bfb766ac36470f9ec3a3788f85eabe.jpg?caplist=jpg,webp"
+            alt=""
+          />
+        </div>
+      </div>
+      <!-- 如果需要分页器 -->
+      <div class="swiper-pagination">
+        <span
+          class="swiper-pagination-bullet swiper-pagination-bullet-active"
+        ></span>
+        <span class="swiper-pagination-bullet"></span>
+        <span class="swiper-pagination-bullet"></span>
+      </div>
+
+      <!-- 如果需要导航按钮 -->
+      <div class="swiper-button-prev">
+        <i class="iconfont icon-swiperhoutui"></i>
+      </div>
+      <div class="swiper-button-next">
+        <i class="iconfont icon-swiperqianjin"></i>
+      </div>
+    </div>
+  </body>
+</html>
