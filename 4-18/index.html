@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>仿知乎</title>
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="./iconfont.css" />
+    <style>
+      body {
+        background-color: #f6f6f6;
+      }
+      .header-container {
+        background-color: #fff;
+      }
+      .header-wrapper {
+        display: flex;
+        align-items: center;
+        min-width: 1000px;
+        max-width: 1156px;
+        /* justify-content: center; */
+        height: 52px;
+        margin: 0 auto;
+      }
+      .header-logo {
+        margin-right: 40px;
+      }
+      .header-nav {
+        display: flex;
+      }
+      .header-nav li {
+        margin-right: 30px;
+      }
+
+      .header-search {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+      }
+      .header-search-wrapper {
+        max-width: 482px;
+        height: 34px;
+        flex-grow: 1;
+        background-color: pink;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .header-search-input {
+        border: none;
+        background-color: none;
+        margin: 0 20px;
+      }
+      .header-search-wrapper i {
+        margin: 0 20px;
+      }
+
+      .header-btn {
+        display: flex;
+      }
+      .header-login {
+        color: #0066ff;
+        background-color: #fff;
+        outline: none;
+        border: 1px solid #0066ff;
+        /* font-size: 20px; */
+        line-height: 30px;
+        padding: 0 10px;
+        border-radius: 3px;
+        display: block;
+        margin-right: 15px;
+      }
+      .header-zhihu {
+        color: #fff;
+        background-color: #0066ff;
+        border: 1px solid #0066ff;
+        line-height: 30px;
+        padding: 0 10px;
+        border-radius: 3px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-container">
+      <div class="header-wrapper">
+        <div class="header-logo">
+          <a href="#"><img src="./logo.png" alt="" /></a>
+        </div>
+        <ul class="header-nav">
+          <li>首页</li>
+          <li>会员</li>
+          <li>发现</li>
+          <li>等你来答</li>
+        </ul>
+        <div class="header-search">
+          <div class="header-search-wrapper">
+            <input
+              class="header-search-input"
+              type="text"
+              name=""
+              id=""
+              placeholder="520文案"
+            />
+            <i class="iconfont icon-fangdajing"></i>
+          </div>
+        </div>
+        <div class="header-btn">
+          <button class="header-login">登陆</button>
+          <button class="header-zhihu">加入知乎</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
