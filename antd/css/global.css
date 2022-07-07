@@ -266,7 +266,6 @@ button:-moz-focusring,
 }
 .g-ant__main {
   flex-grow: 1; /*扩充剩余宽度*/
-  overflow: hidden;
 }
 .g-ant-sider__wrap {
   /*等高*/
@@ -290,7 +289,23 @@ button:-moz-focusring,
 }
 .g-ant-sider__main {
   flex-grow: 1;
+  overflow: hidden auto;
 }
+.g-ant-sider__main::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.g-ant-sider__main::-webkit-scrollbar-thumb {
+  background: #51606d;
+  border-radius: 3px;
+}
+
+.g-ant-sider__main::-webkit-scrollbar-track {
+  background: #263849;
+  border-radius: 3px;
+}
+
 .g-ant-sider__foot {
   flex-shrink: 0;
 }
@@ -303,12 +318,16 @@ button:-moz-focusring,
   padding: 16px;
 }
 .m-logo > img {
-  width: 34px;
+  width: 32px;
   margin-right: 10px;
 }
 .m-logo > h1 {
   font-weight: 600;
   color: #fff;
+  flex-shrink: 0;
+}
+.g-ant__sider--closed .m-logo {
+  padding: 16px 8px;
 }
 
 .m-menu {
@@ -345,6 +364,12 @@ button:-moz-focusring,
 .m-menu__sub--selected {
   background-color: #1890ff;
   color: #fff;
+}
+.g-ant__sider--closed .m-menu__title {
+  transform: scale(1.5);
+}
+.g-ant__sider--closed .m-menu__sub {
+  display: none;
 }
 
 /*-----------------通用元件(u-)-----------------------*/

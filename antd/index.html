@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="g-ant">
-      <div class="g-ant__sider g-ant__sider--closed">
+      <div class="g-ant__sider">
         <div class="g-ant-sider__wrap g-ant-sider__wrap--fixed">
           <div class="g-ant-sider__head">
             <a class="m-logo" href="#">
@@ -32,6 +32,7 @@
                 <li>工作台</li>
               </ul>
             </li>
+
             <li class="m-menu">
               <div class="m-menu__title">
                 <i class="iconfont icon-car"></i>
@@ -186,5 +187,35 @@
         <p>pppp</p>
       </div>
     </div>
+    <script>
+      const menuTitles = document.getElementsByClassName("m-menu__title");
+      for (let i = 0; i < menuTitles.length; i++) {
+        menuTitles[i].onclick = function () {
+          const menu = this.parentElement;
+          menu.classList.toggle("m-menu--selected");
+          const arrow = this.querySelector('[class*="icon-arrow"]');
+          // console.log(arrow);
+          if (menu.className.includes("m-menu--selected")) {
+            arrow.className = "iconfont icon-arrowup";
+          } else {
+            arrow.className = "iconfont icon-arrowdown";
+          }
+        };
+      }
+      const bar = document.querySelector(".u-bar");
+      const sider = document.querySelector(".g-ant__sider");
+      const menu = document.querySelectorAll(".m-menu");
+      bar.onclick = function () {
+        sider.classList.toggle("g-ant__sider--closed");
+        menu[0].classList.add("m-menu--selected");
+        menu[0].querySelector('[class*="icon-arrow"]').className =
+          "iconfont icon-arrowup";
+        for (let i = 1; i < menu.length; i++) {
+          menu[i].classList.remove("m-menu--selected");
+          menu[i].querySelector('[class*="icon-arrow"]').className =
+            "iconfont icon-arrowdown";
+        }
+      };
+    </script>
   </body>
 </html>
