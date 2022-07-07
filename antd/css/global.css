@@ -264,9 +264,6 @@ button:-moz-focusring,
   width: 208px;
   min-height: 100vh; /*等高布局*/
 }
-.g-ant__main {
-  flex-grow: 1; /*扩充剩余宽度*/
-}
 .g-ant-sider__wrap {
   /*等高*/
   height: 100%;
@@ -308,6 +305,40 @@ button:-moz-focusring,
 
 .g-ant-sider__foot {
   flex-shrink: 0;
+}
+
+.g-ant__main {
+  flex-grow: 1; /*扩充剩余宽度*/
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f2f6;
+}
+.g-ant-main__head {
+  height: 48px;
+  background-color: #fff;
+  box-shadow: 0 1px 4px #ccc;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+}
+.g-ant-main__head i {
+  margin: 0 10px;
+}
+.g-ant-main__main {
+  flex-grow: 1;
+}
+.g-ant-main__foot {
+  flex-shrink: 0;
+  margin: 70px 0 30px 0;
+  text-align: center;
+  color: #ccc;
+  line-height: 30px;
+}
+.g-ant-main__foot a {
+  color: inherit;
+  margin: 0 20px;
 }
 
 /*-----------------通用模块(m-)-----------------------*/
