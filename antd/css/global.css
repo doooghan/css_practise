@@ -246,7 +246,9 @@ button:-moz-focusring,
 }
 
 /*-----------------通用方法-----------------------*/
-
+:root {
+  --theme: #188efc;
+}
 .show {
   display: block !important;
 }
@@ -263,6 +265,7 @@ button:-moz-focusring,
   background-color: #00152a;
   width: 208px;
   min-height: 100vh; /*等高布局*/
+  z-index: 3;
 }
 .g-ant-sider__wrap {
   /*等高*/
@@ -322,6 +325,15 @@ button:-moz-focusring,
   align-items: center;
   justify-content: flex-end;
   padding: 0 20px;
+}
+.g-ant-main__head--fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.g-ant-main__head--fixed + .g-ant-main__main {
+  margin-top: 48px;
 }
 .g-ant-main__head i {
   margin: 0 10px;
@@ -393,7 +405,7 @@ button:-moz-focusring,
   display: block;
 }
 .m-menu__sub--selected {
-  background-color: #1890ff;
+  background-color: var(--theme);
   color: #fff;
 }
 .g-ant__sider--closed .m-menu__title {
@@ -403,6 +415,72 @@ button:-moz-focusring,
   display: none;
 }
 
+.m-card {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+}
+.m-card__title {
+  flex-shrink: 0;
+  font-size: 16px;
+  height: 57px;
+  line-height: 57px;
+  padding-left: 20px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.m-card__body {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.m-setting {
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  background-color: #fff;
+  padding: 0 15px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+.m-setting--open {
+  right: 0;
+}
+.m-setting__bar {
+  width: 48px;
+  height: 48px;
+  background-color: var(--theme);
+  color: #fff;
+  border-radius: 2px;
+  position: absolute;
+  left: -48px;
+  top: calc(50% - 24px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.m-setting__bar > i {
+  font-size: 22px;
+}
+.m-setting__item {
+  margin: 50px 0;
+}
+.m-setting-item__theme {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.m-setting-item__toggle > li {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
 /*-----------------通用元件(u-)-----------------------*/
 .g-ant-sider__foot .u-bar {
   color: #fff;
@@ -410,5 +488,95 @@ button:-moz-focusring,
   display: block;
   cursor: pointer;
   padding: 15px;
+}
+.u-foxiaolan,
+.u-bomu,
+.u-huoshan,
+.u-rimu,
+.u-mingqing,
+.u-jiguanglv,
+.u-jikelan,
+.u-jiangzi {
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+  line-height: 20px;
+  text-align: center;
+}
+.u-foxiaolan {
+  background: #188efc;
+}
+
+.u-bomu {
+  background: #f5212d;
+}
+
+.u-huoshan {
+  background: #fe531f;
+}
+
+.u-rimu {
+  background: #fbae14;
+}
+
+.u-mingqing {
+  background: #14c2c3;
+}
+
+.u-jiguanglv {
+  background: #53c41a;
+}
+
+.u-jikelan {
+  background: #2f54eb;
+}
+
+.u-jiangzi {
+  background: #722ed1;
+}
+
+.u-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #f0f0f0;
+  margin: 25px 0;
+}
+.u-switch {
+  width: 28px;
+  height: 16px;
+  border-radius: 100px;
+  background-color: var(--theme);
+  cursor: pointer;
+}
+.u-switch--closed {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.u-switch--closed .u-switch__handle {
+  left: 14px;
+}
+.u-switch__handle {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+
+.u-mask {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 5;
+}
+.m-setting--open + .u-mask {
+  display: block;
 }
 /*-----------------响应式系统-----------------------*/
